@@ -3,7 +3,7 @@ let read = prompt()
 
 let velocidadeObj1 = 0, velocidadeObj2 = 0, pesoObj1= 0, pesoObj2 = 0
 let fator1, pesoSoma, fator2, fatorSoma, vlFinal
-
+console.clear()
 
 //process.stdout.write()
 process.stdout.write('Peso do objeto 1: ')
