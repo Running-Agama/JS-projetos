@@ -29,9 +29,10 @@ for(let i = 0; i < 5; i++){
   const musica = musicas.data[i];
   listaMusicas.push({
     id: musica.id,
+    artist: musica.artist.name,
     title: musica.title,
     link: musica.link,
-    img: musica.album.cover
+    img: musica.album.cover_big
   })}
 const musica = musicas.data[1];
 
@@ -41,6 +42,5 @@ console.log(listaMusicas);
 
 //Ver como fazer o loop parar quando não ter resultados de pesquisas suficientes pra iteração
 //Quando não tem resultados suficientes, o programa tenta adicionar um valor inexistente ao array
-
 //TODO: consultar cada objeto e colocar a imagem correspondente em uma pagina web
 //TODO: Pesquisar sobre funções assincronas
