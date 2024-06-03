@@ -1,6 +1,6 @@
 import axios from "axios";
-import prompt from "prompt-sync"
-const read = prompt()
+import prompt from "prompt-sync";
+const read = prompt();
 
 let headersList = {
  "Accept": "*/*",
@@ -15,31 +15,32 @@ let reqOptions = {
 
 
 console.log('Insira o nome de uma musica')
-const resposta = read()
-reqOptions.url += resposta
+const resposta = read();
+reqOptions.url += resposta;
 
 let response = await axios.request(reqOptions);
 
 
-let listaMusicas = [{}]
+let listaMusicas = [{}];
 
-const musicas = response.data
+const musicas = response.data;
 
 for(let i = 0; i < 5; i++){
-  const musica = musicas.data[i]
+  const musica = musicas.data[i];
   listaMusicas.push({
     id: musica.id,
     title: musica.title,
     link: musica.link,
     img: musica.album.cover
   })}
-const musica = musicas.data[1]
+const musica = musicas.data[1];
 
 
-console.log(listaMusicas.length)
-console.log(listaMusicas)
+console.log(listaMusicas.length);
+console.log(listaMusicas);
 
+//Ver como fazer o loop parar quando não ter resultados de pesquisas suficientes pra iteração
+//Quando não tem resultados suficientes, o programa tenta adicionar um valor inexistente ao array
 
-//TODO: loop pra iterar cada musica
 //TODO: consultar cada objeto e colocar a imagem correspondente em uma pagina web
-//TODO: Usuario deve pesquisar musicas depois e adicionar elas a uma lista
+//TODO: Pesquisar sobre funções assincronas
