@@ -24,7 +24,17 @@ let response = await axios.request(reqOptions);
 let listaMusicas = [{}];
 
 const musicas = response.data;
+//testar depois
 
+for(let musica in musicas.data){
+   listaMusicas.push({
+     id: musica.id,
+     artist: musica.artist.name,
+     title: musica.title,
+     link:  musica.link,
+     img: mudica.album.cover_big
+     })}
+//
 for(let i = 0; i < 5; i++){
   const musica = musicas.data[i];
   listaMusicas.push({
