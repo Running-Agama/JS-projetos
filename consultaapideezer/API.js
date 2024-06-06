@@ -24,7 +24,7 @@ let response = await axios.request(reqOptions);
 let listaMusicas = [{}];
 
 const musicas = response.data;
-//testar depois
+/*testar depois
 
 for(let musica in musicas.data){
    listaMusicas.push({
@@ -34,7 +34,7 @@ for(let musica in musicas.data){
      link:  musica.link,
      img: mudica.album.cover_big
      })}
-//
+*/
 for(let i = 0; i < 5; i++){
   const musica = musicas.data[i];
   listaMusicas.push({
